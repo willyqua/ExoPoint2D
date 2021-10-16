@@ -2,22 +2,29 @@ package fr.dessin;
 
 import java.util.ArrayList;
 
-public class Point2D {
+public class Point2D extends Point{
 
+    protected static int compteur;
     private int x;
     private int y;
 
-    private Point2D() {
+
+    public Point2D() {
+        compteur++;
     }
 
     public Point2D(int x, int y) {
+        this(); // rappelle constructeur vide. donc compteur++ et l'incrémente.
         this.x = x;
         this.y = y;
     }
 
+    public void translater(int dX, int dY) throws PointException /*ArithmeticException,IllegalArgumentException*/ {
+        if(dX < 0) {
 
-    public void translater(double dX, int dY) {
+            throw new PointException("Le point Dx ne peux pas etre inférieur à zéro");
 
+        }
         this.x += dX;
         this.y += dY;
     }
@@ -32,9 +39,12 @@ public class Point2D {
 
     }
 
+    public static int getCompteur() {
+        return compteur;
+    }
 
     public int getX() {
-        return x;
+        return x + 2;
     }
 
     public void setX(int x) {
