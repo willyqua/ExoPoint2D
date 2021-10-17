@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Point2D extends Point{
 
-    protected static int compteur;
+    static int compteur;
     private int x;
     private int y;
 
@@ -17,6 +17,7 @@ public class Point2D extends Point{
         this(); // rappelle constructeur vide. donc compteur++ et l'incrémente.
         this.x = x;
         this.y = y;
+
     }
 
     public void translater(int dX, int dY) throws PointException /*ArithmeticException,IllegalArgumentException*/ {
@@ -30,11 +31,10 @@ public class Point2D extends Point{
     }
 
     public void display() {
-
         ArrayList<Integer> point = new ArrayList<>();
         point.add(this.x);
         point.add(this.y);
-        System.out.println(point);
+        System.out.println("translate p1D " + point);
 
 
     }
@@ -44,7 +44,7 @@ public class Point2D extends Point{
     }
 
     public int getX() {
-        return x + 2;
+        return x;
     }
 
     public void setX(int x) {
@@ -58,4 +58,6 @@ public class Point2D extends Point{
     public void setY(int y) {
         this.y = y;
     }
+
+
 }

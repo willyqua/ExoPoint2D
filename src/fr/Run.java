@@ -16,16 +16,17 @@ public class Run {
             p1.translater(7, 14);
             p1.display();
 
-            Point3D p2 = new Point3D(5, 5, 5);
+            Point3D p2 = new Point3D(25, 25, 5);
             p2.display();
             p2.translater(5, 5, 5);
-
-            //new Point3D(5, 5, 5).display().translater(5, 5, 5);
-
             p2.display();
+
+            //new Point3D(5, 5, 5).display();
+
+           /* p2.display3D();
             p2.translater(7, 10);
-            p2.display();
-            System.out.println(Point2D.getCompteur());
+            p2.display3D();*/
+            System.out.println("compteur" + Point3D.getCompteur());
             //new Point(); can't be instanciated
             System.out.println(p1.giveName("point 2d"));
             System.out.println(p2.giveName("point 3d"));
@@ -33,8 +34,8 @@ public class Run {
             System.out.println(e.getMessage());
         }
 
-        Chain chain = new Chain();
-        chain.methodA("on").methodB("enchaine").methodA("les").methodB("methodes").methodB("direct"); // the methods are chained.
+       /* Chain chain = new Chain();
+        chain.methodA("on").methodB("enchaine").methodA("les").methodB("methodes").methodB("direct"); // the methods are chained.*/
 
 
     }
